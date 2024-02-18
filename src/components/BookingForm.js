@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,Navigate,useNavigate } from "react-router-dom";
 export default function ReservationForm(props) {
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
@@ -14,7 +14,14 @@ export default function ReservationForm(props) {
   const [finalTime, setFinalTime] = useState(
     props.availableTimes.map((times) => <option>{times}</option>)
   );
+  
+function handleSubmit(e){
+  e.preventDefault();
+  props.submitForm(e);
+ 
+ 
 
+}
   function handleDateChange(e) {
     setDate(e.target.value);
 
@@ -27,7 +34,7 @@ export default function ReservationForm(props) {
   }
 
   return (
-    <form className="reservation-form">
+    <form className="reservation-form" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="fName">First Name</label> <br></br>
         <input
@@ -164,8 +171,8 @@ export default function ReservationForm(props) {
             double-check your answer before submitting your reservation request.
           </p>
         </small>
-        <Link className="action-button" to="/confirmation" role="button" name="reserveButton">
-          Book Table
+        <Link className="action-button" to="/Confirmation" role="button" name="reserveButton" >
+          Book your Table
         </Link>
       </div>
     </form>
