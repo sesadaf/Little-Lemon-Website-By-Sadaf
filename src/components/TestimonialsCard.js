@@ -32,7 +32,9 @@ const TestimonialsCard = (props) => {
        
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
-          <Card.Text>{props.rating}</Card.Text>
+          
+    
+            <Card.Text>{props.rating} <span className="star">&#9733;</span>  </Card.Text>
           <Card.Text>{props.description}</Card.Text>
         </Card.Body>
       </Card>

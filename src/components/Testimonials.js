@@ -9,7 +9,7 @@ import image1 from "../components/assets/1.jpg";
 import image2 from "../components/assets/2.jpg";
 import image3 from "../components/assets/3.jpg";
 import image4 from "../components/assets/4.jpg";
-
+//  -----------Using map function---------------
 const TestimonialsArray = [
   {
     id: 1,
@@ -67,4 +67,56 @@ const Testimonials = () => {
     </section>
   );
 };
+
+
+//------  using  seaparate data without array mappping" ---------------
+/* 
+const Testimonials = () => {
+    return (
+      <section id="testimonials" className="Testimonial-card-container">
+        <div className="Testimonial-card-containe">
+          <Container fluid="sm">
+            <div className="title-holder">
+              <Carousel col={3} row={1}>
+                
+                 
+                    <Carousel.Item>
+                      <TestimonialsCard
+                        id="1" 
+                        title="Micheal well"
+                        image={image1}
+                        description="The food here really refreshed me after a late night shift
+                        at the local supply depot"
+                        rating="5.0"
+                      />
+                    </Carousel.Item>
+                     <Carousel.Item>
+                     <TestimonialsCard
+                       id="2" 
+                       title="Aliyana well"
+                       image={image3}
+                       description="This restaurant served as a perfect dinner for me after a long night of studying. I would definitely order from here again!."
+                       rating="5.0"
+                     />
+                   </Carousel.Item>
+                    <Carousel.Item>
+                    <TestimonialsCard
+                      id="3" 
+                      title="Alex Wall"
+                      image={image4}
+                      description="The food here was fire, the best of best mediterranean . will visit aggain soon."
+                      rating="5.0"
+                    />
+                  </Carousel.Item>
+                 
+                
+               
+              </Carousel>
+            </div>
+          </Container>
+        </div>
+      </section>
+    );
+  };
+  */
 export default Testimonials;

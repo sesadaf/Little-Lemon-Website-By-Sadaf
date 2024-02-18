@@ -1,16 +1,16 @@
 import React from 'react';
 import HeaderElement from '../components/Header';
 import Footer from '../components/Footer';
-//import ReservationsPage from '../components/ReservationsPage';
+import BookingsPage from '../components/BookingsPage';
 
-const Reservations = () => {
+const Bookings = () => {
   return (
     <div>
       <HeaderElement />
-      {/* <ReservationsPage /> */}
+      {<BookingsPage /> }
       <Footer />
     </div>
   )
 }
 
-export default Reservations
+export default Bookings

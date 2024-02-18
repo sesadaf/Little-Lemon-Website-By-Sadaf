@@ -3,7 +3,7 @@ import './App.css';
 import "react-bootstrap/dist/react-bootstrap.min.js"
 import { Routes, Route } from "react-router-dom"
 import Home from "./routes/Home";
-import Reservations from "./routes/Reservations";
+import Bookings from "./routes/Bookings";
 
 
 
@@ -12,7 +12,7 @@ function App() {
     <>
       <Routes>
         <Route path = "/" element = {<Home />}/>
-        <Route path = "/reservations" element = {<Reservations />}/>
+        <Route path = "/Bookings" element = {<Bookings />}/>
       </Routes>
     </>
   );
