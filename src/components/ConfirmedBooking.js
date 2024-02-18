@@ -1,9 +1,11 @@
 import React from "react";
 
+import "../components/styles/ConfirmationBooking.css";
+
 const ConfirmedBooking = () => {
     return(
         <header>
-            <section>
+            <section className="confirm-section-container Confirm-section-background ">
             <h1>Booking has been confirmed!
         </h1>
             </section>
